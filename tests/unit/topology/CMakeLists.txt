@@ -5,9 +5,9 @@
 # file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
 
 if (HPX_WITH_SHARED_PRIORITY_SCHEDULER AND HPX_WITH_CXX14_RETURN_TYPE_DEDUCTION)
-  set(tests ${tests}
-    numa_allocator
-  )
+  # set(tests ${tests}
+  #   numa_allocator
+  # )
 
   # NB. threads = -2 = threads = 'cores'
   # NB. threads = -1 = threads = 'all'

@@ -17,7 +17,7 @@ set(tests
     thread_id
     thread_launching
     thread_mf
-    thread_stacksize
+    # thread_stacksize
     thread_suspension_executor
     thread_yield
    )

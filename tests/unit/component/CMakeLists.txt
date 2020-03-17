@@ -29,25 +29,25 @@ set(tests
    )
 
 if(HPX_WITH_NETWORKING)
-    set(tests ${tests}
-        launch_process
-       )
+    # set(tests ${tests}
+    #     launch_process
+    #    )
 
     # add executable needed for launch_process_test
-    add_hpx_executable(launched_process_test
-      INTERNAL_FLAGS
-      SOURCES launched_process.cpp
-      EXCLUDE_FROM_ALL
-      HPX_PREFIX ${HPX_BUILD_PREFIX}
-      FOLDER "Tests/Unit/Components"
-      COMPONENT_DEPENDENCIES launch_process_test_server)
+    # add_hpx_executable(launched_process_test
+    #   INTERNAL_FLAGS
+    #   SOURCES launched_process.cpp
+    #   EXCLUDE_FROM_ALL
+    #   HPX_PREFIX ${HPX_BUILD_PREFIX}
+    #   FOLDER "Tests/Unit/Components"
+    #   COMPONENT_DEPENDENCIES launch_process_test_server)
 
-    set(launch_process_FLAGS
-        DEPENDENCIES iostreams_component process_component
-                     launch_process_test_server_component)
-    set(launch_process_PARAMETERS
-      --launch=$<TARGET_FILE:launched_process_test>
-      --hpx:expect-connecting-localities)
+    # set(launch_process_FLAGS
+    #     DEPENDENCIES iostreams_component process_component
+    #                  launch_process_test_server_component)
+    # set(launch_process_PARAMETERS
+    #   --launch=$<TARGET_FILE:launched_process_test>
+    #   --hpx:expect-connecting-localities)
 endif()
 
 set(action_invoke_no_more_than_PARAMETERS
@@ -123,5 +123,5 @@ foreach(test ${tests})
 endforeach()
 
 if(HPX_WITH_NETWORKING)
-  add_hpx_pseudo_dependencies(tests.unit.component.launch_process launched_process_test)
+  # add_hpx_pseudo_dependencies(tests.unit.component.launch_process launched_process_test)
 endif()

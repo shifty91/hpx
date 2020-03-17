@@ -7,7 +7,7 @@
 set(tests
     partitioned_vector_adjacent_difference1
     partitioned_vector_adjacent_difference2
-    partitioned_vector_adjacent_find1
+    # partitioned_vector_adjacent_find1
     partitioned_vector_adjacent_find2
     partitioned_vector_all_of1
     partitioned_vector_all_of2
